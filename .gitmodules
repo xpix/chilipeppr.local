@@ -91,3 +91,9 @@
 [submodule "widgets/xpix-widget-3dviewer"]
 	path = widgets/xpix-widget-3dviewer
 	url = https://github.com/xpix/widget-3dviewer.git
+[submodule "widgets/xpix-widget-console"]
+	path = widgets/xpix-widget-console
+	url = https://github.com/xpix/widget-console.git
+[submodule "widgets/xpix-widget-gcodelist"]
+	path = widgets/xpix-widget-gcodelist
+	url = https://github.com/xpix/widget-gcodelist.git
