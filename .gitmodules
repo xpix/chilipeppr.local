@@ -100,3 +100,6 @@
 [submodule "jslib/waypoints"]
 	path = jslib/waypoints
 	url = https://github.com/imakewebthings/waypoints.git
+[submodule "widgets/widget-wcs"]
+	path = widgets/widget-wcs
+	url = https://github.com/chilipeppr/widget-wcs.git
