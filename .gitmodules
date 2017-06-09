@@ -97,3 +97,6 @@
 [submodule "widgets/xpix-widget-gcodelist"]
 	path = widgets/xpix-widget-gcodelist
 	url = https://github.com/xpix/widget-gcodelist.git
+[submodule "jslib/waypoints"]
+	path = jslib/waypoints
+	url = git@github.com:imakewebthings/waypoints.git

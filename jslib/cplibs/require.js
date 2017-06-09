@@ -2130,18 +2130,18 @@ requirejs.config({
         // is using jQuery 1.9.0 located at
         // js/lib/jquery-1.9.0.js, relative to
         // the HTML page.
-		    chilipeppr_ready: 'jslib/cplibs/main', // done
-		    chilipeppr_init2: 'jslib/cplibs/app2', // done
-		    chilipeppr_init: 'jslib/cplibs/app',   // done
-		    google: '//www.google-analytics.com/analytics', // ignore
-        jquery: '//code.jquery.com/jquery-2.1.0.min', // as submodule done
-		    bootstrap: 'jslib/bootstrap/dist/js/bootstrap.min', // done
-		    amplify: 'jslib/amplify/lib/amplify',
-		    jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
-		    jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
-        jqueryuiWidget: 'jslib/jquery/ui/jquery.ui.widget',
-        jqueryuiMouse: 'jslib/jquery/ui/jquery.ui.mouse',
-        jqueryuiResizeable: 'jslib/jquery-ui/ui/jquery.ui.resizable',
+         chilipeppr_ready: 'jslib/cplibs/main', // done
+         chilipeppr_init2: 'jslib/cplibs/app2', // done
+         chilipeppr_init: 'jslib/cplibs/app',   // done
+         google: '//www.google-analytics.com/analytics', // ignore
+         jquery: '//code.jquery.com/jquery-2.1.0.min', // as submodule done
+         bootstrap: 'jslib/bootstrap/dist/js/bootstrap.min', // done
+         amplify: 'jslib/amplify/lib/amplify',
+         jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
+         jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
+         jqueryuiWidget: 'jslib/jquery-ui/ui/jquery.ui.widget',
+         jqueryuiMouse: 'jslib/jquery-ui/ui/jquery.ui.mouse',
+         jqueryuiResizeable: 'jslib/jquery-ui/ui/jquery.ui.resizable',
     },
 	shim: {
 		"chilipeppr_ready": ["jquery", "bootstrap", "amplify", "chilipeppr_init2"],
