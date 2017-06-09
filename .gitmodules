@@ -82,3 +82,12 @@
 [submodule "widgets/widget-cayenn"]
 	path = widgets/widget-cayenn
 	url = git@github.com:chilipeppr/widget-cayenn.git
+[submodule "widgets/widget-configtinyg"]
+	path = widgets/widget-configtinyg
+	url = git@github.com:chilipeppr/widget-configtinyg.git
+[submodule "widgets/xpix-widget-tinyg"]
+	path = widgets/xpix-widget-tinyg
+	url = https://github.com/xpix/widget-tinyg.git
+[submodule "widgets/xpix-widget-3dviewer"]
+	path = widgets/xpix-widget-3dviewer
+	url = https://github.com/xpix/widget-3dviewer.git
