@@ -222,6 +222,9 @@ body.hover {
     <script type='text/javascript'>
     //<![CDATA[
 /* global cpdefine chilipeppr cprequire */
+
+// ----------- chilipeppr.local changes ----------
+// Now we are in "test" - mode. Means this is the main method for cp.local
 cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
 
     console.log("initting workspace");
@@ -234,7 +237,7 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
      */
     var loadFlashMsg = function() {
         chilipeppr.load("#com-chilipeppr-widget-flash-instance",
-            "http://fiddle.jshell.net/chilipeppr/90698kax/show/light/",
+            "http://fiddle.jshell.net/chilipeppr/90698kax/show/light/", // TODO: Github submodule, build a github repository
             function() {
                 console.log("mycallback got called after loading flash msg module");
                 cprequire(["inline:com-chilipeppr-elem-flashmsg"], function(fm) {
@@ -250,7 +253,7 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
     ws.init();
 
     // Do some niceties for testing like margins on widget and title for browser
-    $('title').html("Tinyg Workspace");
+    $('title').html("Tinyg LOCAL Workspace");
     $('body').css('padding', '10px');
 
 } /*end_test*/ );
@@ -392,7 +395,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             var that = this;
             chilipeppr.load(
                 "#com-chilipeppr-widget-console-instance",
-                "http://raw.githubusercontent.com/chilipeppr/widget-console/master/auto-generated-widget.html",
+                "widgets/widget-console/auto-generated-widget.html",
                 function() {
                     // Callback after widget loaded into #com-chilipeppr-widget-spconsole-instance
                     cprequire(
@@ -424,7 +427,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // Workspace Menu with Workspace Billboard
             var that = this;
             chilipeppr.load(
-                "http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html",
+                "widgets/widget-pubsubviewer/auto-generated-widget.html",
                 function() {
                     require(['inline:com-chilipeppr-elem-pubsubviewer'], function(pubsubviewer) {
 
@@ -453,7 +456,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             this.font2gcodeObj = function() {
                 return {
                     name: "font2gcode",
-                    url: "http://raw.githubusercontent.com/chilipeppr/widget-font2gcode/master/auto-generated-widget.html",
+                    url: "widgets/widget-font2gcode/auto-generated-widget.html",
                     id: "com-zipwhip-widget-font2gcode",
                     btn: $('#com-chilipeppr-ws-menu .font2gcode-button'),
                     div: $('#com-chilipeppr-ws-font2gcode'),
@@ -540,7 +543,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             this.svg2gcodeObj = function() {
                 return {
                     name: "svg2gcode",
-                    url: "http://raw.githubusercontent.com/chilipeppr/widget-svg2gcode/master/auto-generated-widget.html",
+                    url: "widgets/widget-svg2gcode/auto-generated-widget.html",
                     id: "com-zipwhip-widget-svg2gcode",
                     btn: $('#com-chilipeppr-ws-menu .svg2gcode-button'),
                     div: $('#com-chilipeppr-ws-svg2gcode'),
@@ -622,35 +625,12 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             }();
             this.svg2gcodeObj.init();
             //End SVG2Gcode
-            
-            // Inject the Font2Gcode widget
-            /*
-            $('<div class="zhigh" id="com-chilipeppr-ws-font2gcode"></div>')
-                .insertAfter('#com-chilipeppr-ws-zipwhip-recvtext');
-
-            chilipeppr.load(
-              "#com-chilipeppr-ws-font2gcode",
-              "http://raw.githubusercontent.com/chilipeppr/widget-font2gcode/master/auto-generated-widget.html",
-              function() {
-                // Callback after widget loaded into #myDivComZipwhipWidgetFont2gcode
-                // Now use require.js to get reference to instantiated widget
-                cprequire(
-                  ["inline:com-zipwhip-widget-font2gcode"], // the id you gave your widget
-                  function(myObjComZipwhipWidgetFont2gcode) {
-                    // Callback that is passed reference to the newly loaded widget
-                    console.log("Widget / Font2Gcode just got loaded.", myObjComZipwhipWidgetFont2gcode);
-                    //myObjComZipwhipWidgetFont2gcode.init();
-                  }
-                );
-              }
-            );
-            */
 
             // Zipwhip texting
             // com-chilipeppr-ws-zipwhip
             chilipeppr.load(
                 "#com-chilipeppr-ws-zipwhip",
-                "http://raw.githubusercontent.com/chilipeppr/widget-zipwhip/master/auto-generated-widget.html",
+                "widgets/widget-zipwhip/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-elem-zipwhip"], function(zipwhip) {
                         zipwhip.init();
@@ -717,7 +697,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         var that = this;
                         chilipeppr.load(
                           this.zipwhipRecvTextDiv.prop("id"),
-                          "http://raw.githubusercontent.com/chilipeppr/widget-recvtext/master/auto-generated-widget.html",
+                          "widgets/widget-recvtext/auto-generated-widget.html",
                           function() {
                             // Callback after widget loaded into #myDivWidgetRecvtext
                             // Now use require.js to get reference to instantiated widget
@@ -755,7 +735,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // com-chilipeppr-ws-autolevel
             chilipeppr.load(
                 "#com-chilipeppr-ws-autolevel",
-                "http://raw.githubusercontent.com/chilipeppr/widget-autolevel/master/auto-generated-widget.html",
+                "widgets/widget-autolevel/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-widget-autolevel"], function(autolevel) {
                         autolevel.init();
@@ -785,7 +765,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // com-chilipeppr-ws-macro
             chilipeppr.load(
                 "#com-chilipeppr-ws-macro",
-                "http://raw.githubusercontent.com/chilipeppr/widget-macro/master/auto-generated-widget.html",
+                "widgets/widget-macro/auto-generated-widget.html",
                 function() {
                     //"http://fiddle.jshell.net/chilipeppr/ZJ5vV/show/light/", function () {
                     cprequire(["inline:com-chilipeppr-widget-macro"], function(macro) {
@@ -815,7 +795,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // com-chilipeppr-ws-jscut
             chilipeppr.load(
                 "#com-chilipeppr-ws-jscut",
-                "http://raw.githubusercontent.com/chilipeppr/widget-jscut/master/auto-generated-widget.html",
+                "widgets/widget-jscut/auto-generated-widget.html",
                 function() {
                     require(["inline:org-jscut-gcode-widget"], function(jscut) {
                         jscut.init();
@@ -837,38 +817,6 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         });
                     });
                 }); //End JSCut
-                
-            
-            // Laser Solder
-            // com-chilipeppr-ws-jscut
-            chilipeppr.load(
-                "#com-chilipeppr-ws-lasersolder",
-                "http://fiddle.jshell.net/chilipeppr/xuu785yz/show/light/",
-                function() {
-                    require(["inline:com-chilipeppr-widget-lasersolder"], function(ls) {
-                        ls.init();
-                        ls.unactivateWidget();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-ws-menu .lasersolder-button');
-                        var alDiv = $('#com-chilipeppr-ws-lasersolder');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                                ls.activateWidget();
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                                ls.unactivateWidget();
-                            }
-                            $(window).trigger('resize');
-
-                        });
-                    });
-                }); //End Laser Solder
-                
 
             // Eagle BRD Import
             // com-chilipeppr-widget-eagle
@@ -915,8 +863,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                             var that = this;
                             chilipeppr.load(
                                 "#com-chilipeppr-ws-eagle",
-                                //"http://fiddle.jshell.net/chilipeppr/3fe23xsr/show/light/", 
-                                "http://raw.githubusercontent.com/chilipeppr/widget-eagle/master/auto-generated-widget.html",
+                                "widgets/widget-eagle/auto-generated-widget.html",
                                 function() {
                                     require(["inline:com-chilipeppr-widget-eagle"], function(eagle) {
                                         that.eagleInstance = eagle;
@@ -1051,7 +998,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         var that = this;
                         chilipeppr.load(
                             "#com-chilipeppr-ws-gpio",
-                            "http://raw.githubusercontent.com/chilipeppr/widget-gpio/master/auto-generated-widget.html",
+                            "widgets/widget-gpio/auto-generated-widget.html",
                             function() {
                                 require(["inline:net-delarre-widget-gpio"], function(gpio) {
                                     that.gpioInstance = gpio;
@@ -1085,8 +1032,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             this.shuttlexpressObj = function() {
                 return {
                 id: "shuttlexpress",
-                //url: "http://fiddle.jshell.net/chilipeppr/27v59xLg/show/light/",
-                url: "http://raw.githubusercontent.com/chilipeppr/widget-shuttlexpress/master/auto-generated-widget.html",
+                url: "widgets/widget-shuttlexpress/auto-generated-widget.html",
                 requireName: "inline:com-chilipeppr-widget-shuttlexpress",
                 btn: null,
                 div: null,
@@ -1191,7 +1137,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         var that = this;
                         chilipeppr.load(
                             "#com-chilipeppr-ws-touchplate",
-                            "http://raw.githubusercontent.com/chilipeppr/widget-touchplate/master/auto-generated-widget.html",
+                            "widgets/widget-touchplate/auto-generated-widget.html",
                             function() {
                                 require(["inline:com-chilipeppr-widget-touchplate"], function(touchPlate) {
                                     that.touchPlateInstance = touchPlate;
@@ -1259,8 +1205,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                         var that = this;
                         chilipeppr.load(
                             "#com-chilipeppr-ws-superTouchplate",
-                            "http://raw.githubusercontent.com/PyroAVR/widget-super-touchplate/master/auto-generated-widget.html",
-                            // "http://raw.githubusercontent.com/PyroAVR/widget-super-touchplate/tabs/auto-generated-widget.html",
+                            "widgets/widget-super-touchplate/auto-generated-widget.html",
                             function() {
                                 require(["inline:com-chilipeppr-widget-super-touchplate"], function(superTouchPlate) {
                                     that.superTouchPlateInstance = superTouchPlate;
@@ -1291,7 +1236,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // FIDDLE http://jsfiddle.net/chilipeppr/qcduvhkh/11/
             chilipeppr.load(
                 "com-chilipeppr-ws-programmer",
-                "http://raw.githubusercontent.com/chilipeppr/widget-programmer/master/auto-generated-widget.html",
+                "widgets/widget-programmer/auto-generated-widget.html",
                 require(["inline:com-chilipeppr-widget-programmer"], function (programmer) {
                     programmer.init();
                     // setup toggle button
@@ -1305,7 +1250,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // Load the dragdrop element into workspace toolbar
             // http://jsfiddle.net/chilipeppr/Z9F6G/
             chilipeppr.load("#com-chilipeppr-ws-gcode-dragdrop",
-                "http://raw.githubusercontent.com/chilipeppr/elem-dragdrop/master/auto-generated-widget.html",
+                "widgets/elem-dragdrop/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-elem-dragdrop"], function(dd) {
                         console.log("inside require of dragdrop");
@@ -1334,11 +1279,9 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             ); //End Element / Drag Drop
             
             // 3D Viewer
-            // http://jsfiddle.net/chilipeppr/y3HRF
             chilipeppr.load(
                 "#com-chilipeppr-3dviewer",
-                //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
-                "http://raw.githubusercontent.com/chilipeppr/widget-3dviewer/master/auto-generated-widget.html",
+                "widgets/widget-3dviewer/auto-generated-widget.html",
     
                 function() {
                     console.log("got callback done loading 3d");
@@ -1382,10 +1325,8 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             ); //End 3D Viewer
 
             // Gcode List v3
-            // OLD v2 http://jsfiddle.net/chilipeppr/F2Qn3/
-            // NEW v3 with onQueue/onWrite/onComplete http://jsfiddle.net/chilipeppr/a4g5ds5n/
             chilipeppr.load("#com-chilipeppr-gcode-list",
-                "http://raw.githubusercontent.com/chilipeppr/widget-gcodelist/master/auto-generated-widget.html",
+                "widgets/widget-gcodelist/auto-generated-widget.html",
 
                 function() {
                     cprequire(
@@ -1405,7 +1346,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // NEW VERSION http://jsfiddle.net/chilipeppr/rczajbx0/
             // The new version supports onQueue, onWrite, onComplete
             chilipeppr.load("#com-chilipeppr-serialport-log",
-                "https://raw.githubusercontent.com/chilipeppr/widget-console/master/auto-generated-widget.html",
+                "widgets/widget-console/auto-generated-widget.html",
 
                 function() {
                     cprequire(
@@ -1439,16 +1380,9 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
 
 
             // XYZ
-            // http://jsfiddle.net/chilipeppr/gh45j/
             chilipeppr.load(
                 "com-chilipeppr-xyz",
-                // Lauer's new widget 8/16/15
-                "http://raw.githubusercontent.com/chilipeppr/widget-axes/master/auto-generated-widget.html", 
-                // Temporary widget from Danal
-                //"http://fiddle.jshell.net/Danal/vktco1y6/show/light/", 
-                // Lauer's original core widget
-                //"http://fiddle.jshell.net/chilipeppr/gh45j/show/light/",
-        
+                "widgets/widget-axes/auto-generated-widget.html", 
                 function () {
                     cprequire(
                     ["inline:com-chilipeppr-widget-xyz"],
@@ -1460,16 +1394,9 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             ); //End XYZ
             
             // TinyG
-            // http://jsfiddle.net/chilipeppr/XxEBZ/
-            // com-chilipeppr-tinyg
             chilipeppr.load(
                 "com-chilipeppr-tinyg",
-                // Lauer's v2 (Jul 28th 2015) Fixed to {"sv":1}
-                "http://raw.githubusercontent.com/chilipeppr/widget-tinyg/master/auto-generated-widget.html",
-                // Danal's version
-                //"http://fiddle.jshell.net/Danal/6rq2wx3o/show/light/",
-                // Lauer's version
-                //"http://fiddle.jshell.net/chilipeppr/XxEBZ/show/light/",
+                "widgets/widget-tinyg/auto-generated-widget.html",
         
                 function () {
                     cprequire(
@@ -1484,7 +1411,7 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
             // Cayenn Widget
             chilipeppr.load(
               "#com-chilipeppr-ws-cayenn",
-              "http://raw.githubusercontent.com/chilipeppr/widget-cayenn/master/auto-generated-widget.html",
+              "widgets/widget-cayenn/auto-generated-widget.html",
               function() {
                 // Callback after widget loaded into #myDivWidgetCayenn
                 // Now use require.js to get reference to instantiated widget
@@ -1521,44 +1448,6 @@ cpdefine("inline:com-chilipeppr-workspace-tinyg", ["chilipeppr_ready"], function
                 );
               }
             );
-
-            // WebRTC Client com-chilipeppr-webrtcclient
-            /*
-            chilipeppr.load(
-                "com-chilipeppr-webrtcclient",
-                "http://fiddle.jshell.net/chilipeppr/qWj4f/show/light/",
-        
-            function () {
-                cprequire(
-                ["inline:com-chilipeppr-widget-webrtc-client"],
-        
-                function (webrtcclient) {
-                    webrtcclient.init();
-                });
-            }); //End WebRTC Client
-            */
-
-            /* For testing. Load RPM Sensor */
-            // com-chilipeppr-ws-rpmsensor
-            /*
-            chilipeppr.load(
-              "#com-chilipeppr-ws-rpmsensor",
-              "http://raw.githubusercontent.com/chilipeppr/widget-rpmsensor/master/auto-generated-widget.html",
-              function() {
-                // Callback after widget loaded into #myDivWidgetRpmsensor
-                // Now use require.js to get reference to instantiated widget
-                cprequire(
-                  ["inline:com-chilipeppr-widget-rpmsensor"], // the id you gave your widget
-                  function(myObjWidgetRpmsensor) {
-                    // Callback that is passed reference to the newly loaded widget
-                    console.log("Widget / Template just got loaded.", myObjWidgetRpmsensor);
-                    myObjWidgetRpmsensor.init();
-                  }
-                );
-              }
-            );
-            */
-
         },
         //end loadWidgets
 
