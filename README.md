@@ -2,8 +2,9 @@
 Solution for an offline chilipeppr that can run local on your machine (Windows/Linux)
 
 ## Windows installation
-* install mongoose & git for windows https://www.cesanta.com/products/binary, https://git-for-windows.github.io/
-* start git-bash
+* install mongoose & git for windows 
+  https://www.cesanta.com/products/binary, https://git-for-windows.github.io/
+* start git-bash:
 ````
 git clone https://github.com/xpix/chilipeppr.local
 cd chilipeppr.local
@@ -11,7 +12,6 @@ git submodule update --init --recursive # <-- this need some time ~ 15min
 ````
 * start mongoose and set this to the root git directory
 * surf to http://localhost:8080/chilipeppr.local/workspace_tinyg.html
-
 
 ## TODO
 * add jquery as a local js lib
