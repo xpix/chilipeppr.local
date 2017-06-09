@@ -1,90 +1,90 @@
 [submodule "jslib/bootstrap"]
 	path = jslib/bootstrap
-	url = git@github.com:twbs/bootstrap.git
+	url = https://github.com/twbs/bootstrap.git
 [submodule "widgets/widget-spjs"]
 	path = widgets/widget-spjs
-	url = git@github.com:chilipeppr/widget-spjs.git
+	url = https://github.com/chilipeppr/widget-spjs.git
 [submodule "jslib/jquery"]
 	path = jslib/jquery
-	url = git@github.com:jquery/jquery.git
+	url = https://github.com/jquery/jquery.git
 [submodule "jslib/amplify"]
 	path = jslib/amplify
-	url = git@github.com:mikehostetler/amplify.git
+	url = https://github.com/mikehostetler/amplify.git
 [submodule "jslib/jquery-cookie"]
 	path = jslib/jquery-cookie
-	url = git@github.com:carhartl/jquery-cookie.git
+	url = https://github.com/carhartl/jquery-cookie.git
 [submodule "jslib/jquery-ui"]
 	path = jslib/jquery-ui
-	url = git@github.com:jquery/jquery-ui.git
+	url = https://github.com/jquery/jquery-ui.git
 [submodule "jslib/threejs"]
 	path = jslib/threejs
-	url = git@github.com:mrdoob/three.js.git
+	url = https://github.com/mrdoob/three.js.git
 [submodule "widgets/widget-console"]
 	path = widgets/widget-console
-	url = git@github.com:chilipeppr/widget-console.git
+	url = https://github.com/chilipeppr/widget-console.git
 [submodule "widgets/widget-pubsubviewer"]
 	path = widgets/widget-pubsubviewer
-	url = git@github.com:chilipeppr/widget-pubsubviewer.git
+	url = https://github.com/chilipeppr/widget-pubsubviewer.git
 [submodule "widgets/widget-font2gcode"]
 	path = widgets/widget-font2gcode
-	url = git@github.com:chilipeppr/widget-font2gcode.git
+	url = https://github.com/chilipeppr/widget-font2gcode.git
 [submodule "widgets/widget-svg2gcode"]
 	path = widgets/widget-svg2gcode
-	url = git@github.com:chilipeppr/widget-svg2gcode.git
+	url = https://github.com/chilipeppr/widget-svg2gcode.git
 [submodule "widgets/widget-zipwhip"]
 	path = widgets/widget-zipwhip
-	url = git@github.com:chilipeppr/widget-zipwhip.git
+	url = https://github.com/chilipeppr/widget-zipwhip.git
 [submodule "widgets/widget-recvtext"]
 	path = widgets/widget-recvtext
-	url = git@github.com:chilipeppr/widget-recvtext.git
+	url = https://github.com/chilipeppr/widget-recvtext.git
 [submodule "widgets/widget-autolevel"]
 	path = widgets/widget-autolevel
-	url = git@github.com:chilipeppr/widget-autolevel.git
+	url = https://github.com/chilipeppr/widget-autolevel.git
 [submodule "widgets/widget-macrp"]
 	path = widgets/widget-macro
-	url = git@github.com:chilipeppr/widget-macro.git
+	url = https://github.com/chilipeppr/widget-macro.git
 [submodule "widgets/widget-jscut"]
 	path = widgets/widget-jscut
-	url = git@github.com:chilipeppr/widget-jscut.git
+	url = https://github.com/chilipeppr/widget-jscut.git
 [submodule "widgets/widget-eagle"]
 	path = widgets/widget-eagle
-	url = git@github.com:chilipeppr/widget-eagle.git
+	url = https://github.com/chilipeppr/widget-eagle.git
 [submodule "widgets/widget-gpio"]
 	path = widgets/widget-gpio
-	url = git@github.com:chilipeppr/widget-gpio.git
+	url = https://github.com/chilipeppr/widget-gpio.git
 [submodule "widgets/widget-shuttlexpress"]
 	path = widgets/widget-shuttlexpress
-	url = git@github.com:chilipeppr/widget-shuttlexpress.git
+	url = https://github.com/chilipeppr/widget-shuttlexpress.git
 [submodule "widgets/widget-touchplate"]
 	path = widgets/widget-touchplate
-	url = git@github.com:chilipeppr/widget-touchplate.git
+	url = https://github.com/chilipeppr/widget-touchplate.git
 [submodule "widgets/widget-super-touchplate"]
 	path = widgets/widget-super-touchplate
-	url = git@github.com:PyroAVR/widget-super-touchplate.git
+	url = https://github.com/PyroAVR/widget-super-touchplate.git
 [submodule "widgets/widget-programmer"]
 	path = widgets/widget-programmer
-	url = git@github.com:chilipeppr/widget-programmer.git
+	url = https://github.com/chilipeppr/widget-programmer.git
 [submodule "widgets/elem-dragdrop"]
 	path = widgets/elem-dragdrop
-	url = git@github.com:chilipeppr/elem-dragdrop.git
+	url = https://github.com/chilipeppr/elem-dragdrop.git
 [submodule "widgets/widget-3dviewer"]
 	path = widgets/widget-3dviewer
-	url = git@github.com:chilipeppr/widget-3dviewer.git
+	url = https://github.com/chilipeppr/widget-3dviewer.git
 [submodule "widgets/widget-gcodelist"]
 	path = widgets/widget-gcodelist
-	url = git@github.com:chilipeppr/widget-gcodelist.git
+	url = https://github.com/chilipeppr/widget-gcodelist.git
 [submodule "widgets/widget-axes"]
 	path = widgets/widget-axes
-	url = git@github.com:chilipeppr/widget-axes.git
+	url = https://github.com/chilipeppr/widget-axes.git
 [submodule "widgets/widget-tinyg"]
 	path = widgets/widget-tinyg
-	url = git@github.com:chilipeppr/widget-tinyg.git
+	url = https://github.com/chilipeppr/widget-tinyg.git
 [submodule "widgets/widget-cayenn"]
 	path = widgets/widget-cayenn
-	url = git@github.com:chilipeppr/widget-cayenn.git
+	url = https://github.com/chilipeppr/widget-cayenn.git
 [submodule "widgets/widget-configtinyg"]
 	path = widgets/widget-configtinyg
-	url = git@github.com:chilipeppr/widget-configtinyg.git
+	url = https://github.com/chilipeppr/widget-configtinyg.git
 [submodule "widgets/xpix-widget-tinyg"]
 	path = widgets/xpix-widget-tinyg
 	url = https://github.com/xpix/widget-tinyg.git
@@ -99,4 +99,4 @@
 	url = https://github.com/xpix/widget-gcodelist.git
 [submodule "jslib/waypoints"]
 	path = jslib/waypoints
-	url = git@github.com:imakewebthings/waypoints.git
+	url = https://github.com/imakewebthings/waypoints.git
