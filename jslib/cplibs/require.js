@@ -2130,33 +2130,18 @@ requirejs.config({
         // is using jQuery 1.9.0 located at
         // js/lib/jquery-1.9.0.js, relative to
         // the HTML page.
-		chilipeppr_ready: '//i2dcui.appspot.com/js/main',
-		chilipeppr_init2: '//i2dcui.appspot.com/js/app2',
-		chilipeppr_init: '//i2dcui.appspot.com/js/app',
-		google: '//www.google-analytics.com/analytics',
-        jquery: '//code.jquery.com/jquery-2.1.0.min',
-		bootstrap: '//i2dcui.appspot.com/js/bootstrap/bootstrap_3_1_1.min',
-//		bootstrap: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min',
-		amplify: '//i2dcui.appspot.com/js/amplify-1.1.2/amplify',
-		jquerycookie: '//i2dcui.appspot.com/js/jquery-cookie/jquery.cookie',
-		jqueryui: '//i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.core',
-        jqueryuiWidget: '//i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.widget',
-        jqueryuiMouse: '//i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.mouse',
-        jqueryuiResizeable: '//i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.resizable',
-		// original without ssl
-//		chilipeppr_ready: 'http://www.chilipeppr.com/js/main',
-//		chilipeppr_init2: 'http://www.chilipeppr.com/js/app2',
-//		chilipeppr_init: 'http://www.chilipeppr.com/js/app',
-//		google: 'http://www.google-analytics.com/analytics',
-//      jquery: 'http://code.jquery.com/jquery-2.1.0.min',
-//		bootstrap: 'http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min',
-//		amplify: 'http://www.chilipeppr.com/js/amplify-1.1.2/amplify',
-//		jquerycookie: 'http://www.chilipeppr.com/js/jquery-cookie/jquery.cookie',
-//		jqueryui: 'http://chilipeppr.com/js/jquery-ui-1.10.4/ui/jquery.ui.core',
-//      jqueryuiWidget: 'http://chilipeppr.com/js/jquery-ui-1.10.4/ui/jquery.ui.widget',
-//      jqueryuiMouse: 'http://chilipeppr.com/js/jquery-ui-1.10.4/ui/jquery.ui.mouse',
-//      jqueryuiResizeable: 'http://chilipeppr.com/js/jquery-ui-1.10.4/ui/jquery.ui.resizable',
-
+		    chilipeppr_ready: 'jslib/cplibs/main', // done
+		    chilipeppr_init2: 'jslib/cplibs/app2', // done
+		    chilipeppr_init: 'jslib/cplibs/app',   // done
+		    google: '//www.google-analytics.com/analytics', // ignore
+        jquery: '//code.jquery.com/jquery-2.1.0.min', // as submodule done
+		    bootstrap: 'jslib/bootstrap/dist/js/bootstrap.min', // done
+		    amplify: 'jslib/amplify/lib/amplify',
+		    jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
+		    jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
+        jqueryuiWidget: 'jslib/jquery/ui/jquery.ui.widget',
+        jqueryuiMouse: 'jslib/jquery/ui/jquery.ui.mouse',
+        jqueryuiResizeable: 'jslib/jquery-ui/ui/jquery.ui.resizable',
     },
 	shim: {
 		"chilipeppr_ready": ["jquery", "bootstrap", "amplify", "chilipeppr_init2"],

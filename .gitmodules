@@ -1,3 +1,21 @@
 [submodule "jslib/bootstrap"]
 	path = jslib/bootstrap
 	url = git@github.com:twbs/bootstrap.git
+[submodule "widgets/widget-spjs"]
+	path = widgets/widget-spjs
+	url = git@github.com:chilipeppr/widget-spjs.git
+[submodule "jslib/jquery"]
+	path = jslib/jquery
+	url = git@github.com:jquery/jquery.git
+[submodule "jslib/amplify"]
+	path = jslib/amplify
+	url = git@github.com:mikehostetler/amplify.git
+[submodule "jslib/jquery-cookie"]
+	path = jslib/jquery-cookie
+	url = git@github.com:carhartl/jquery-cookie.git
+[submodule "jslib/jquery-ui"]
+	path = jslib/jquery-ui
+	url = git@github.com:jquery/jquery-ui.git
+[submodule "jslib/threejs"]
+	path = jslib/threejs
+	url = git@github.com:mrdoob/three.js.git
