@@ -113,15 +113,6 @@ require(["jquery","bootstrap","amplify","google"], function() {
 					bust = "forcerefresh=true&";
 				}
 				
-            // set to local directory if location == chilipeppr.local
-            if( window.location.pathname.match(/chilipeppr.local/) && panel.url.match(/githubusercontent/)){
-               // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
-               var res = panel.url.replace(/^.+widget\-/, "widgets/widget-");
-               res = res.replace(/\/master/, "");
-               panel.url = res;
-               alert(panel.url);
-            }
-            
 				//$.get("/geturl?" + bust + "url=" + panel.url, function(data) {
 				//$.get("http://chilipeppr.com/geturl?" + bust + "url=" + panel.url, function(data) {
 				$.get(panel.url, function(data) { // set for chilipeppr.local == pure url
