@@ -1,0 +1,3 @@
+[submodule "jslib/bootstrap"]
+	path = jslib/bootstrap
+	url = git@github.com:twbs/bootstrap.git
