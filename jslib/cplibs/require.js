@@ -8,6 +8,29 @@
 /*jslint regexp: true, nomen: true, sloppy: true */
 /*global window, navigator, document, importScripts, setTimeout, opera */
 
+// Patch for chilipeppr local ... search for an alternative solution ..
+function replaceToLocal(url){
+   console.log("OVERLOAD args:", url);
+   if( url !== undefined && window.location.pathname.match(/chilipeppr.local/)){
+      var replaced = url;
+      console.log("origin:", url);
+      if(url.match(/appspot/ig)){
+         // http://i2dcui.appspot.com/js/clipper/clipper_unminified.js
+         replaced = url.replace(/^.+\//, "jslib/cplibs/");
+         console.log("OVERLOAD rquirejs load routine: ", replaced);
+         return replaced;
+      }
+      if(url.match(/githubusercontent/)){
+         // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
+         replaced = url.replace(/^.+widget\-/, "widgets/widget-");
+         replaced = replaced.replace(/\/master/, "");
+         console.log("OVERLOAD rquirejs load routine: ", replaced);
+      }
+      return replaced;
+   }
+   return url;
+}
+
 var requirejs, require, define;
 (function (global) {
     var req, s, head, baseElement, dataMain, src,
@@ -1636,7 +1659,7 @@ var requirejs, require, define;
             //Delegates to req.load. Broken out as a separate function to
             //allow overriding in the optimizer.
             load: function (id, url) {
-                req.load(context, id, url);
+               req.load(context, id, url);
             },
 
             /**
@@ -2075,6 +2098,7 @@ require.load = function(context, moduleName, url) {
         // do nothing
         //console.log("doing no remote retrieval for in-memory load");        
     } else {
+        arguments[2] = replaceToLocal(arguments[2]);
         // they want an external load, let it thru to orig load
         require.orig_load.apply(this, arguments);
     }
