@@ -45,6 +45,10 @@ function replaceToLocal(url){
          replaced = "jslib/jquery.js";
       }
 
+      if(url.match(/cloudflare\.com.+?three\.js/)){
+         replaced = "jslib/threejs/build/three.min.js";
+      }
+
       console.log("OVERLOAD rquirejs load routine: ", replaced);
 
       return replaced;

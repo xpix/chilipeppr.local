@@ -1,0 +1,1 @@
+../threejs/examples/js/Detector.js
