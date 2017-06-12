@@ -9,6 +9,11 @@
     <!-- ChiliPeppr is based on bootstrap CSS. -->
     <link rel="stylesheet" type="text/css" href="jslib/bootstrap/dist/css/bootstrap.min.css">
 
+
+    
+    <!-- load replace callback as external js file for improved development -->
+    <script type='text/javascript' src="jslib/cplocal.js"></script>
+
     <!-- Customized version of require.js for ChiliPeppr. Please see require.js docs for how
     ChiliPeppr's dependency system works as it's based on require.js. -->
     <script type='text/javascript' src="jslib/cplibs/require.js"></script>
@@ -229,6 +234,17 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
 
     console.log("initting workspace");
 
+   // overload get routine in jquery for chilipeppr.local
+   var oldAjax = $.ajax;
+   $.ajax = function() {
+      // set to local directory if location == chilipeppr.local
+      // ------------------------------------------------------
+      var url = arguments[0].url;
+      arguments[0].url = window.replaceToLocal(url);
+      
+      return oldAjax.apply($, arguments);
+   };
+
     /**
      * The Root workspace (when you see the ChiliPeppr Header) auto Loads the Flash 
      * Widget so we can show the 3 second flash messages. However, in test mode we
@@ -248,44 +264,6 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
         );
     };
     loadFlashMsg();
-
-   // overload get routine in jquery for chilipeppr.local
-   var oldAjax = $.ajax;
-   $.ajax = function() {
-      // set to local directory if location == chilipeppr.local
-      // ------------------------------------------------------
-      var url = arguments[0].url;
-      console.log("origin:", url);
-      if( window.location.pathname.match(/chilipeppr.local/)){
-
-         if(url.match(/appspot/ig)){
-            // http://i2dcui.appspot.com/js/clipper/clipper_unminified.js
-            var res = url.replace(/^.+\//, "jslib/cplibs/");
-            arguments[0].url = res;
-         }
-
-         if(url.match(/githubusercontent/)){
-            // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
-            var res = url.replace(/^.+widget\-/, "widgets/widget-");
-            res = res.replace(/\/master/, "");
-            arguments[0].url = res;
-         }
-
-         if(url.match(/jshell/)){
-            // http://fiddle.jshell.net/chilipeppr/90698kax/show/light/
-            var regex = /\/([a-zA-Z0-9]+)\/show/igm;
-            var res = regex.exec(url);
-            arguments[0].url = 'widgets/jsfiddle/' + res[1] + '.html';
-         }
-
-         if(url.match(/datagetallkeys/)){
-            arguments[0].url = 'data/datagetallkeys.json';
-         }
-      }
-      console.log("OVERLOAD get routine: ", arguments);
-      return oldAjax.apply($, arguments);
-   }
-    
     
     // Init workspace
     ws.init();

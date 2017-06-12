@@ -8,53 +8,6 @@
 /*jslint regexp: true, nomen: true, sloppy: true */
 /*global window, navigator, document, importScripts, setTimeout, opera */
 
-// Patch for chilipeppr local ... search for an alternative solution ..
-function replaceToLocal(url){
-   console.log("OVERLOAD args:", url);
-   if( url !== undefined && window.location.pathname.match(/chilipeppr.local/)){
-      var replaced = url;
-      console.log("origin:", url);
-      if(url.match(/appspot/ig)){
-
-         if(url.match(/jquery\.ui/)){
-            // http://i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.core.js
-            replaced = url.replace(/^.+\//, "jslib/jquery-ui/ui/");
-            console.log("OVERLOAD rquirejs load routine: ", replaced);
-            return replaced;
-         }
-
-         // http://i2dcui.appspot.com/js/clipper/clipper_unminified.js
-         replaced = url.replace(/^.+\//, "jslib/cplibs/");
-      }
-
-      if(url.match(/githubusercontent/)){
-         // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
-         replaced = url.replace(/^.+widget\-/, "widgets/widget-");
-         replaced = replaced.replace(/\/master/, "");
-      }
-
-      if(url.match(/jshell/)){
-         // http://fiddle.jshell.net/chilipeppr/90698kax/show/light/
-         var regex = /\/([a-zA-Z0-9]+)\/show/igm;
-         var res = regex.exec(url);
-         replaced = 'widgets/jsfiddle/' + res[1] + '.html';
-      }
-
-      if(url.match(/jquery\.com/)){
-         // code.jquery.com/jquery-2.1.0.min.js
-         replaced = "jslib/jquery.js";
-      }
-
-      if(url.match(/cloudflare\.com.+?three\.js/)){
-         replaced = "jslib/threejs/build/three.min.js";
-      }
-
-      console.log("OVERLOAD rquirejs load routine: ", replaced);
-
-      return replaced;
-   }
-   return url;
-}
 
 var requirejs, require, define;
 (function (global) {
@@ -2123,7 +2076,7 @@ require.load = function(context, moduleName, url) {
         // do nothing
         //console.log("doing no remote retrieval for in-memory load");        
     } else {
-        arguments[2] = replaceToLocal(arguments[2]);
+        arguments[2] = window.replaceToLocal(arguments[2]);
         // they want an external load, let it thru to orig load
         require.orig_load.apply(this, arguments);
     }
