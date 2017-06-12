@@ -257,16 +257,28 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
       var url = arguments[0].url;
       console.log("origin:", url);
       if( window.location.pathname.match(/chilipeppr.local/)){
+
          if(url.match(/appspot/ig)){
             // http://i2dcui.appspot.com/js/clipper/clipper_unminified.js
             var res = url.replace(/^.+\//, "jslib/cplibs/");
             arguments[0].url = res;
          }
+
          if(url.match(/githubusercontent/)){
             // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
             var res = url.replace(/^.+widget\-/, "widgets/widget-");
             res = res.replace(/\/master/, "");
             arguments[0].url = res;
+         }
+
+         if(url.match(/jshell/)){
+            // http://fiddle.jshell.net/chilipeppr/90698kax/show/light/
+            var regex = /\/([a-zA-Z0-9]+)\/show/igm;
+            var res = regex.exec(url);
+            arguments[0].url = 'widgets/jsfiddle/' + res[1] + '.html';
+         }
+         if(url.match(/datagetallkeys/)){
+            arguments[0].url = 'data/datagetallkeys.json';
          }
       }
       console.log("OVERLOAD get routine: ", arguments);
