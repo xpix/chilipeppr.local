@@ -1,1 +1,0 @@
-../jquery-ui/ui/jquery.ui.effect-scale.js

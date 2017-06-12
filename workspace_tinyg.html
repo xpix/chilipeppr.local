@@ -237,7 +237,7 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
      */
     var loadFlashMsg = function() {
         chilipeppr.load("#com-chilipeppr-widget-flash-instance",
-            "http://fiddle.jshell.net/chilipeppr/90698kax/show/light/", // TODO: Github submodule, build a github repository
+            "widgets/jsfiddle/90698kax.html",
             function() {
                 console.log("mycallback got called after loading flash msg module");
                 cprequire(["inline:com-chilipeppr-elem-flashmsg"], function(fm) {
@@ -277,6 +277,7 @@ cprequire_test(["inline:com-chilipeppr-workspace-tinyg"], function(ws) {
             var res = regex.exec(url);
             arguments[0].url = 'widgets/jsfiddle/' + res[1] + '.html';
          }
+
          if(url.match(/datagetallkeys/)){
             arguments[0].url = 'data/datagetallkeys.json';
          }
