@@ -2,8 +2,7 @@
 Solution for an offline chilipeppr that can run local on your machine (Windows/Linux)
 
 ## Windows installation
-* install mongoose & git for windows 
-  https://www.cesanta.com/products/binary, https://git-for-windows.github.io/
+* install [mongoose](https://www.cesanta.com/products/binary) and [git-bash](https://git-for-windows.github.io/) for windows
 * start git-bash:
 ````
 git clone --recursive https://github.com/xpix/chilipeppr.local
