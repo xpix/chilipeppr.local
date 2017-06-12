@@ -6,16 +6,10 @@ Solution for an offline chilipeppr that can run local on your machine (Windows/L
   https://www.cesanta.com/products/binary, https://git-for-windows.github.io/
 * start git-bash:
 ````
-git clone https://github.com/xpix/chilipeppr.local
-cd chilipeppr.local
-git submodule update --init --recursive # <-- this need some time ~ 15min
+git clone --recursive https://github.com/xpix/chilipeppr.local
 ````
 * start mongoose and set this to the root git directory
-* surf to http://localhost:8080/chilipeppr.local/workspace_tinyg.html
-
-## TODO
-* add jquery as a local js lib
-* build github for flash message widget http://fiddle.jshell.net/chilipeppr/90698kax/
+* surf to http://127.0.0.1:8080/chilipeppr.local/workspace_tinyg.html
 
 ## sync fork
 * https://help.github.com/articles/configuring-a-remote-for-a-fork/
