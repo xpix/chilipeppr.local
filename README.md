@@ -15,8 +15,7 @@ git clone --recursive https://github.com/xpix/chilipeppr.local
 * https://help.github.com/articles/syncing-a-fork/
 
 ## use my forked widget to make some changes
-* first fork the original widget from https://github.com/chilipeppr/widget-*: 
-  https://help.github.com/articles/fork-a-repo/
+* first [fork](https://help.github.com/articles/fork-a-repo/) the original widget from https://github.com/chilipeppr/widget-*
 * make a git submodule via git and mark this widget as your own:
 ````
 cd chilipeppr.local/widgets/
