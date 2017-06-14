@@ -46,7 +46,7 @@ cd chilipeppr.local/widgets/
 git submodule add https://github.com/xpix/widget-tinyg.git xpix-widget-tinyg
 cd xpix-widget-tinyg
 ````
-* create a branch for ur local changes git checkout -b my_new_feature_branch
+* create a branch for your local changes ````git checkout -b my_new_feature_branch````
 * change the url in your workspace
 ````
 // TinyG
