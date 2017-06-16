@@ -1,6 +1,3 @@
-[submodule "jslib/bootstrap"]
-	path = jslib/bootstrap
-	url = https://github.com/twbs/bootstrap.git
 [submodule "widgets/widget-spjs"]
 	path = widgets/widget-spjs
 	url = https://github.com/chilipeppr/widget-spjs.git
