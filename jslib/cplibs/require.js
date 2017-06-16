@@ -2140,7 +2140,7 @@ requirejs.config({
          bootstrap: 'jslib/bootstrap_min/bootstrap.min', // done
          amplify: 'jslib/amplify_min/amplify.min',
          jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
-         jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
+         jqueryui: 'jslib/jquery-ui_min/jquery-ui.min',
          jqueryuiWidget: 'jslib/jquery-ui/ui/jquery.ui.widget',
          jqueryuiMouse: 'jslib/jquery-ui/ui/jquery.ui.mouse',
          jqueryuiResizeable: 'jslib/jquery-ui/ui/jquery.ui.resizable',

@@ -8,7 +8,7 @@ window.replaceToLocal = function(url){
 
          if(url.match(/jquery\.ui/)){
             // http://i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.core.js
-            replaced = url.replace(/^.+\//, "jslib/jquery-ui/ui/");
+            replaced = "jslib/jquery-ui_min/jquery-ui.min.js";
             console.log("OVERLOAD rquirejs load routine: ", replaced);
             return replaced;
          }
