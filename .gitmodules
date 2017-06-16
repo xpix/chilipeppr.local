@@ -4,9 +4,6 @@
 [submodule "jslib/jquery"]
 	path = jslib/jquery
 	url = https://github.com/jquery/jquery.git
-[submodule "jslib/amplify"]
-	path = jslib/amplify
-	url = https://github.com/mikehostetler/amplify.git
 [submodule "jslib/jquery-cookie"]
 	path = jslib/jquery-cookie
 	url = https://github.com/carhartl/jquery-cookie.git

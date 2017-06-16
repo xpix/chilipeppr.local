@@ -2138,7 +2138,7 @@ requirejs.config({
          google: '//www.google-analytics.com/analytics', // ignore
          jquery: '//code.jquery.com/jquery-2.1.0.min', // as submodule done
          bootstrap: 'jslib/bootstrap_min/bootstrap.min', // done
-         amplify: 'jslib/amplify/lib/amplify',
+         amplify: 'jslib/amplify_min/amplify.min',
          jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
          jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
          jqueryuiWidget: 'jslib/jquery-ui/ui/jquery.ui.widget',
