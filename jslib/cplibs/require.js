@@ -2136,11 +2136,11 @@ requirejs.config({
          chilipeppr_init2: 'jslib/cplibs/app2', // done
          chilipeppr_init: 'jslib/cplibs/app',   // done
          google: '//www.google-analytics.com/analytics', // ignore
-         jquery: '//code.jquery.com/jquery-2.1.0.min', // as submodule done
-         bootstrap: 'jslib/bootstrap/dist/js/bootstrap.min', // done
-         amplify: 'jslib/amplify/lib/amplify',
+         jquery: 'jslib/jquery_min/jquery-2.2.4.min', // as submodule done
+         bootstrap: 'jslib/bootstrap_min/bootstrap.min', // done
+         amplify: 'jslib/amplify_min/amplify.min',
          jquerycookie: 'jslib/jquery-cookie/src/jquery.cookie',
-         jqueryui: 'jslib/jquery-ui/ui/jquery.ui.core',
+         jqueryui: 'jslib/jquery-ui_min/jquery-ui.min',
          jqueryuiWidget: 'jslib/jquery-ui/ui/jquery.ui.widget',
          jqueryuiMouse: 'jslib/jquery-ui/ui/jquery.ui.mouse',
          jqueryuiResizeable: 'jslib/jquery-ui/ui/jquery.ui.resizable',
