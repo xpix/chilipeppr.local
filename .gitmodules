@@ -1,9 +1,6 @@
 [submodule "widgets/widget-spjs"]
 	path = widgets/widget-spjs
 	url = https://github.com/chilipeppr/widget-spjs.git
-[submodule "jslib/jquery"]
-	path = jslib/jquery
-	url = https://github.com/jquery/jquery.git
 [submodule "jslib/jquery-cookie"]
 	path = jslib/jquery-cookie
 	url = https://github.com/carhartl/jquery-cookie.git
