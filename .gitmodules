@@ -4,9 +4,6 @@
 [submodule "jslib/jquery-cookie"]
 	path = jslib/jquery-cookie
 	url = https://github.com/carhartl/jquery-cookie.git
-[submodule "jslib/threejs"]
-	path = jslib/threejs
-	url = https://github.com/mrdoob/three.js.git
 [submodule "widgets/widget-console"]
 	path = widgets/widget-console
 	url = https://github.com/chilipeppr/widget-console.git

@@ -36,7 +36,7 @@ window.replaceToLocal = function(url){
       }
 
       if(url.match(/cloudflare\.com.+?three\.js/)){
-         replaced = "jslib/threejs/build/three.min.js";
+         replaced = "jslib/threejs_min/three.min.js";
       }
 
       if(url.match(/cloudflare\.com.+?waypoints/)){
