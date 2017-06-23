@@ -88,6 +88,3 @@
 [submodule "widgets/widget-wcs"]
 	path = widgets/widget-wcs
 	url = https://github.com/chilipeppr/widget-wcs.git
-[submodule "widgets/widget-grbl-autolevel"]
-	path = widgets/widget-grbl-autolevel
-	url = https://github.com/chilipeppr-grbl/widget-grbl-autolevel.git
