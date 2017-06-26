@@ -4,10 +4,10 @@ function patchGRBL(that){
    
    // translate from tinyg to grbl status line
    set_recvline(that);
-   set_onRecvLine(that);
+   set_grbl_filter(that);
 }
 
-function set_onRecvLine(that){
+function set_grbl_filter(that){
    that.widgetConsole.isFilterActive = true;
    that.widgetConsole.filterRegExp = /^\</;
 };
@@ -51,6 +51,7 @@ function set_recvline(that){
 
 
          this.processStats(stats);
+         this.publishAxisStatus(stats);
       }
 
       // https://github.com/gnea/grbl/wiki/Grbl-v1.1-Interface#real-time-status-reports
