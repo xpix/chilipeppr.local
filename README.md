@@ -31,8 +31,8 @@ Please check the Installation guide's to know how you can install this local on 
 ## Raspberry installation
 * login via ssh to raspberry as user "pi"
 ```
+cd /home/pi
 git clone --recursive https://github.com/xpix/chilipeppr.local
-cd chilipeppr.local
 sudo apt-get install nginx # install webserver
 sudo /etc/init.d/nginx start
 cd /var/www/html
