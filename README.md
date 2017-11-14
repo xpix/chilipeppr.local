@@ -28,6 +28,17 @@ Please check the Installation guide's to know how you can install this local on 
 * you have to update your installation from time to time
 * i don't know :)
 
+## Raspberry installation
+* login via ssh to raspberry as user "pi"
+* call ````
+git clone --recursive https://github.com/xpix/chilipeppr.local
+cd chilipeppr.local
+sudo apt-get install nginx # install webserver
+sudo /etc/init.d/nginx start
+cd /var/www/html
+sudo ln -s /home/pi/chilipeppr.local/workspace_tinyg.html .
+````
+
 ## Windows installation
 * install [mongoose](https://www.cesanta.com/products/binary) and [git-bash](https://git-for-windows.github.io/) for windows
 * start git-bash: ````git clone --recursive https://github.com/xpix/chilipeppr.local````
