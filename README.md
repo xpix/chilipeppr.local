@@ -36,8 +36,10 @@ git clone --recursive https://github.com/xpix/chilipeppr.local
 sudo apt-get install nginx # install webserver
 sudo /etc/init.d/nginx start
 cd /var/www/html
-sudo ln -s /home/pi/chilipeppr.local/workspace_tinyg.html .
+sudo ln -s /home/pi/chilipeppr.local .
 ```
+* call chilipepper on your raspberry in a browser: http://127.0.0.1/chilipeppr.local/workspace_tinyg.html
+
 
 ## Windows installation
 * install [mongoose](https://www.cesanta.com/products/binary) and [git-bash](https://git-for-windows.github.io/) for windows
