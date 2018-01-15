@@ -5,11 +5,21 @@ function patchGRBL(that){
    // translate from tinyg to grbl status line
    set_recvline(that);
    set_grbl_filter(that);
+
+   setInterval(function() {
+      if(that.widgetSpjs.isWsConnected)
+         chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
+            D: '$G',
+            Id: "grblstpars-cmd",
+         });
+   }, 5000);
+   
+   
 }
 
 function set_grbl_filter(that){
    that.widgetConsole.isFilterActive = true;
-   that.widgetConsole.filterRegExp = /^\</;
+   that.widgetConsole.filterRegExp = /^(\<|ok|\[GC|\$G)/;
 };
 
 function set_recvline(that){
