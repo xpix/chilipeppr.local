@@ -20,7 +20,7 @@ Please check the Installation guide's to know how you can install this local on 
 * you can install chilipeppr to your root server or raspberry pi
 * you need as additional Software just a webserver and a browser
 * use grep on your machine to find external cp code to develop your own widget
-* just call ````git submodule update --recursive```` and all modules are refreshed to the latest version
+* just call ````git submodule update --recursive --remote```` and all modules are refreshed to the latest version
 * possible to local test your brandnew alpha widget
 * 
 
