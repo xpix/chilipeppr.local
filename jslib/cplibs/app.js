@@ -1,6 +1,6 @@
 // Makes sure we only run once jquery is loaded as well
 // as ensuring we don't load javascript libraries multiple times
-require(["jquery","bootstrap","amplify","google"], function() {
+require(["jquery","bootstrap","amplify"], function() {
     
 	console.log("ChiliPeppr Run-level 1: inside app.js define method...");
 	

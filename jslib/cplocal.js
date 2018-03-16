@@ -1,6 +1,6 @@
 
 window.replaceToLocal = function(url){
-   console.log("OVERLOAD args:", url);
+   console.log("OVERLOAD0 args:", url);
    if( url ){
       var replaced = url;
       console.log("origin:", url);
@@ -9,14 +9,26 @@ window.replaceToLocal = function(url){
          if(url.match(/jquery\.ui/)){
             // http://i2dcui.appspot.com/js/jquery-ui-1.10.4/ui/jquery.ui.core.js
             replaced = "jslib/jquery-ui_min/jquery-ui.min.js";
-            console.log("OVERLOAD rquirejs load routine: ", replaced);
+            console.log("--->  OVERLOAD1 requirejs load routine: ", replaced);
             return replaced;
          }
 
          // http://i2dcui.appspot.com/js/clipper/clipper_unminified.js
-         replaced = url.replace(/^.+\//, "jslib/cplibs/");
+         //replaced = url.replace(/^.+\//, "jslib/cplibs/");
+         if(url.match(/widget\-/)){
+            replaced = replaced.replace(/^.+widget\-/, "widgets/widget-");
+         }
+         
+          if(url.match(/widgets/)){
+            replaced = replaced.replace(/^.+widgets/, "widgets");
+         }
+        
+    
       }
 
+     
+        
+   
       if(url.match(/githubusercontent/)){
          // https://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html
          replaced = url.replace(/^.+widget\-/, "widgets/widget-");
@@ -46,8 +58,23 @@ window.replaceToLocal = function(url){
       if(url.match(/datagetallkeys/)){
          arguments[0].url = 'data/datagetallkeys.json';
       }
-
-      console.log("OVERLOAD rquirejs load routine: ", replaced);
+      
+       if(url.match(/js\/three/)){
+           replaced = url.replace(/^.+js\/three/, "jslib/cplibs");
+       }
+      
+      if(url.match(/snap\.svg\-min\.js/)){
+         replaced =  "jslib/cplibs/snap.svg-min.js"
+      }
+       if(url.match(/Detector.js/)){
+         replaced =  "jslib/cplibs/Detector.js"
+      }
+      
+       if(url.match(/TrackballControls.js/)){
+         replaced =  "jslib/cplibs/TrackballControls.js"
+      }
+      
+      console.log("--->  OVERLOAD1 ", replaced);
 
       return replaced;
    }
